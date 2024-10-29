@@ -1,7 +1,7 @@
-FROM busybox:latest
+FROM alpine:latest
 
-RUN sudo apt full-upgrade -y
-RUN apt install -y \
+RUN apk upgrade
+RUN apk install \
     locate \
     usbutils \
     udev \
