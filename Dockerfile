@@ -1,9 +1,9 @@
 FROM busybox:latest
 
-RUN apt --yes update
-RUN apt --yes upgrade
-RUN apt --yes install usbutils
-RUN apt --yes install udev
-RUN apt --yes install libv4l-0
-RUN apt --yes install fswebcam
-RUN apt --yes install gphoto2
+RUN apt-get --yes update
+RUN apt-get --yes upgrade
+RUN apt-get --yes install usbutils
+RUN apt-get --yes install udev
+RUN apt-get --yes install libv4l-0
+RUN apt-get --yes install fswebcam
+RUN apt-get --yes install gphoto2
