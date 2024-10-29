@@ -1,11 +1,9 @@
-FROM busybox:lastest
+ARG  CODE_VERSION=latest
+FROM busybox:$(CODE_VERSION)
 
-LABEL org.opencontainers.image.authors="René Schubotz"
-LABEL org.opencontainers.image.source="https://github.com/resc2801/focuspocus/"
-
-RUN apt update -y && apt upgrade -y
-
-RUN apt install libv4l-0
-RUN apt install fswebcam
-RUN apt install gphoto2
-
+RUN <<EOF
+apt update -y && apt upgrade -y
+apt install libv4l-0
+apt install fswebcam
+apt install gphoto2
+EOF
