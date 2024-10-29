@@ -1,7 +1,7 @@
 FROM busybox:latest
 
-RUN apt-get update
-RUN apt-get install -y \
+RUN sudo apt full-upgrade -y
+RUN apt install -y \
     locate \
     usbutils \
     udev \
