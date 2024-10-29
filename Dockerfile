@@ -1,10 +1,9 @@
 FROM busybox:latest
 
-RUN <<EOF
-apt update -y && apt upgrade -y
-apt install usbutils
-apt install udev
-apt install libv4l-0
-apt install fswebcam
-apt install gphoto2
-EOF
+RUN apt --yes update
+RUN apt --yes upgrade
+RUN apt --yes install usbutils
+RUN apt --yes install udev
+RUN apt --yes install libv4l-0
+RUN apt --yes install fswebcam
+RUN apt --yes install gphoto2
