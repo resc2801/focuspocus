@@ -1,9 +1,15 @@
 FROM busybox:latest
 
-RUN apt-get --yes update
-RUN apt-get --yes upgrade
-RUN apt-get --yes install usbutils
-RUN apt-get --yes install udev
-RUN apt-get --yes install libv4l-0
-RUN apt-get --yes install fswebcam
-RUN apt-get --yes install gphoto2
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install -y \
+    locate \
+    usbutils \
+    udev \
+    libv4l-0 \
+    fswebcam \
+    gphoto2 \
+    motion 
+
+
+ENV LD_PRELOAD='/usr/lib/aarch64-linux-gnu/libv4l/v4l1compat.so'
