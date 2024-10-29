@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk upgrade
-RUN apk install \
+RUN apk add \
     locate \
     usbutils \
     udev \
