@@ -1,7 +1,7 @@
-FROM arm64v8/debian:bookworm-slim
+FROM arm64v7/debian:bookworm-slim
 
-RUN apt-get update -y 
-RUN apt-get upgrade -y
+RUN apt-get update 
+RUN apt-get upgrade 
 
 RUN apt-get install -y --no-install-recommends \
     sudo \
