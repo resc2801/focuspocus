@@ -11,11 +11,7 @@ env:
 
 jobs:
   build-and-push-image:
-    runs-on: 
-      - ubuntu-latest
-      - self-hosted
-      - base-images
-      - ARM64
+    runs-on: ubuntu-latest
 
     permissions:
       contents: read
