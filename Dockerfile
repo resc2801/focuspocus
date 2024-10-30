@@ -1,9 +1,21 @@
-FROM --platform=linux/arm64 debian:bookworm-slim
+FROM arm64v8/debian:bookworm-slim
 
-RUN apt-get update -y
+RUN apt-get update -y 
 RUN apt-get upgrade -y
 
-RUN apt-get install -y \
+RUN apt-get install -y --no-install-recommends \
+    sudo \
+    ca-certificates \
+    findutils \
+    gnupg \
+    dirmngr \
+    inetutils-ping \
+    netbase \
+    curl \
+    udev \
+    procps 
+
+RUN apt-get install -y --no-install-recommends \
     locate \
     libv4l-0 \
     v4l-utils \
